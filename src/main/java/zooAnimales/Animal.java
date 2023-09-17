@@ -6,7 +6,21 @@ public class Animal{
     private int edad ;
     private String habitat;
     private String genero;
-    private arraylist<Zona> zona;
+    private Arraylist<Zona> zona;
+
+
+    public Animal(){
+
+    }
+
+    public Animal(int totalAnimales,String nombre, int edad, String habitat,String genero,Arraylist<Zona> zonas){
+        this.totalAnimales= totalAnimales;
+        this.nombre = nombre;
+        this.edad = edad;
+        this.habitat = habitat;
+        this.genero = genero;
+        this.zona = zona;
+    }
 
     public void movimiento(){
 
