@@ -20,7 +20,7 @@ public class Anfibio extends Animal{
         this.venenoso = venenoso;
         listado.add(this);
     }
-    public int cantidadAnfibios(){
+    public static int cantidadAnfibios(){
         return listado.size();
     }
 
