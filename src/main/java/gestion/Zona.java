@@ -23,7 +23,7 @@ public class Zona{
     }
 
     public Zoologico getZoo() {
-        return zoo;
+        return this.zoo;
     }
 
     public void setZoo(Zoologico zoo) {

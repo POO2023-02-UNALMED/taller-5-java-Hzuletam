@@ -49,7 +49,7 @@ public class Pez extends Animal{
         return this.cantidadAletas;
     }
 
-    public movimiento(){
+    public String movimiento(){
         return "nadar";
 
     }
