@@ -81,11 +81,11 @@ public class Animal{
                 + Anfibios.cantidadAnfibios();
     }
 
-    public toString(){
+    public String toString(){
         if (zona != null){
             "Mi nombre es " + this.nombre + ", tengo una edad de "+ this.edad + ", habito en " + thi.habitat
                     + " y mi genero es " + this.genero + ", la zona en la que me ubico es " + this.zona.getNombre()
-                    + ", en el " + this.zona.getZoo();
+                    + ", en el " + ((this.zona).getZoo());
         } else {
             return "Mi nombre es " + this.nombre + ", tengo una edad de " + this.edad + ", habito en " + this.habitat
                     + " y mi genero es " + this.genero;
