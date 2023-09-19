@@ -28,11 +28,6 @@ public class Reptil extends Animal{
 
     }
 
-    public String movimiento(){
-        return "reptar";
-
-    }
-
     public static Reptil crearIguana(String nombre, int edad, String genero){
         Reptil Iguana= new Reptil(nombre,edad , "humedal", genero, "blanco", 3);
         Reptil.iguanas++;
@@ -53,7 +48,7 @@ public class Reptil extends Animal{
         return this.largoCola;
     }
 
-    public tring movimiento(){
+    public String movimiento(){
         return "reptar";
     }
 }

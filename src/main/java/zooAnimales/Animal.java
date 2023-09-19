@@ -22,7 +22,7 @@ public class Animal{
         this.edad = edad;
         this.habitat = habitat;
         this.genero = genero;
-        Animal.totalAnimales++;
+        totalAnimales++;
     }
 
     public void setZona(Zona zona) {
@@ -30,7 +30,7 @@ public class Animal{
     }
 
     public static int getTotalAnimales() {
-        return Animal.totalAnimales;
+        return totalAnimales;
     }
 
     public String getNombre() {
@@ -49,8 +49,8 @@ public class Animal{
         return this.habitat;
     }
 
-    public static void setTotalAnimales(int totalAnimales) {
-        Animal.totalAnimales = totalAnimales;
+    public static void setTotalAnimales(int TotalAnimales) {
+        totalAnimales = TotalAnimales;
     }
 
     public void setNombre(String nombre) {
@@ -77,13 +77,13 @@ public class Animal{
     public static String totalPorTipo(){
 
         return "Mamiferos: " + Mamifero.cantidadMamiferos() + "\nAves: " + Ave.cantidadAves() + "\nReptiles: "
-                + Reptil.cantidadReptiles() + "\nPeces: " + Pez.cantidadPecez() + "\nAnfibios: "
-                + Anfibios.cantidadAnfibios();
+                + Reptil.cantidadReptiles() + "\nPeces: " + Pez.cantidadpeces() + "\nAnfibios: "
+                + Anfibio.cantidadAnfibios();
     }
 
     public String toString(){
         if (zona != null){
-            return "Mi nombre es " + this.nombre + ", tengo una edad de "+ this.edad + ", habito en " + thi.habitat
+            return "Mi nombre es " + this.nombre + ", tengo una edad de "+ this.edad + ", habito en " + this.habitat
                     + " y mi genero es " + this.genero + ", la zona en la que me ubico es " + this.zona.getNombre()
                     + ", en el " + this.zona.getZoo();
         } else {
