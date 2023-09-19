@@ -22,7 +22,7 @@ public class Zona{
         return this.nombre;
     }
 
-    public Zoologico getZoo() {
+    public Zoologico getZoo(){
         return this.zoo;
     }
 
