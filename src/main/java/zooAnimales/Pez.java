@@ -50,7 +50,7 @@ public class Pez extends Animal{
     }
 
     public movimiento(){
-        return "nadar"
+        return "nadar";
 
     }
 }

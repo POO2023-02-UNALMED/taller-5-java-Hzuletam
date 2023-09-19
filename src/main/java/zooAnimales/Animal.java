@@ -12,7 +12,7 @@ public class Animal{
 
 
     public Animal(){
-        Animal.totalAnimales++
+        Animal.totalAnimales++;
 
     }
 
