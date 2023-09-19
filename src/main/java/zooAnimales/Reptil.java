@@ -1,43 +1,59 @@
+package zooAnimales;
+
 import java.util.Arraylist;
 
-public class reptil extends Animal{
-    private Arraylist<Reptil> listado;
-    public int iguanas;
-    public int serpientes;
+public class Reptil extends Animal{
+
+    private static Arraylist<Reptil> listado= new Arraylist<>();
+    public static int iguanas;
+    public static int serpientes;
     private String colorEscamas;
     private int largoCola;
 
     public Reptil(){
+        Reptil.listado.add(this);
 
     }
 
-    public Reptil(int totalAnimales,String nombre, int edad, String habitat,String genero,Arraylist<Zona> zonas, Arraylist<reptil> lista, int iguanas, int serpientes,String colorEscamas,int largoCola){
-        this.totalAnimales= totalAnimales;
-        this.nombre = nombre;
-        this.edad = edad;
-        this.habitat = habitat;
-        this.genero = genero;
-        this.zona = zona;
-        this.listado = lista;
-        this.iguanas = iguanas;
-        this.serpientes = serpientes;
+    public Reptil(String nombre, int edad, String habitat, String genero, String colorEscamas, int largoCola){
+        super(nombre,edad,habitat,genero);
         this.colorEscamas = colorEscamas;
         this.largoCola = largoCola;
+        Reptil.listado.add(this);
     }
 
-    public int cantidadReptiles(){
-        return listado.lenght()
-    }
+    public static int cantidadReptiles(){
 
-    public movimiento(){
+        return Reptil.listado.size();
 
     }
 
-    public crearIguana(){
-        Reptil();
+    public String movimiento(){
+        return "reptar";
+
     }
 
-    public crearSerpiente(){
-        reptil();
+    public static Reptil crearIguana(String nombre, int edad, String genero){
+        Reptil Iguana= new Reptil(nombre,edad , "humedal", genero, "blanco", 3);
+        Reptil.iguanas++;
+        return Iguana;
+    }
+
+    public static Reptil crearSerpiente(String nombre, int edad, String genero) {
+        Reptil Serpiente = new Reptil(nombre, edad , "jungla", genero, "blanco", 1);
+        Reptil.serpientes++;
+        return Serpiente;
+    }
+
+    public String getColorEscamas() {
+        return this.colorEscamas;
+    }
+
+    public int getLargoCola() {
+        return this.largoCola;
+    }
+
+    public tring movimiento(){
+        return "reptar";
     }
 }

@@ -2,42 +2,54 @@ import java.util.Arraylist;
 
 public class Anfibio extends Animal{
 
-    private Arraylist<Anfibio> listado;
-    public int ranas;
-    public int salamandras;
+    private static Arraylist<Anfibio> listado = new Arraylist<>();
+    public static int ranas;
+    public static int salamandras;
     private String colorPiel;
     private boolean venenoso;
 
     public Anfibio(){
-
+    Anfibio.listado.add(this);
     }
 
-    public Anfibio( int totalAnimales, String nombre, int edad, String habitat, String genero, Arraylist<Zona> zonas,Arraylist lista, int ranas, int salamandras, String colorPiel, boolean venenoso){
-        this.totalAnimales= totalAnimales;
-        this.nombre = nombre;
-        this.edad = edad;
-        this.habitat = habitat;
-        this.genero = genero;
-        this.zona = zona;
-        this.listado = lista;
-        this.ranas = ranas;
-        this.salamandras = salamandras;
+    public Anfibio( String nombre, int edad, String habitat, String genero, String colorPiel, boolean venenoso){
+        super(nombre,edad,habitat,genero);
         this.colorPiel = colorPiel;
         this.venenoso = venenoso;
+        Anfibio.listado.add(this);
     }
     public int cantidadAnfibios(){
-        return listado.lenght();
+        return Anfibio.listado.size();
     }
 
-    public void movimiento(){
+    public String movimiento(){
 
     }
 
-    public crearRana(){
-        Anfibio();
+    public static Anfibio crearRana(String nombre, int edad , String genero ){
+
+        Anfibio Rana = new Anfibio(nombre, edad, "selva", genero, "rojo", true);
+        Anfibio.ranas++;
+        return Rana;
+
     }
 
-    public crearSalamandra(){
-        Anfibio();
+    public static Anfibio crearSalamandra(String nombre, int edad, String genero){
+
+        Anfibio Salamandra = new Anfibio(nombre, edad, "selva", genero, "negro y amarillo", false);
+        Anfibio.salamandras++;
+        return Salamandra;
+    }
+
+    public String getColorPiel() {
+        return this.colorPiel;
+    }
+
+    public boolean isVenenoso() {
+        return this.venenoso;
+    }
+
+    public String movimiento(){
+        return "saltar";
     }
 }
